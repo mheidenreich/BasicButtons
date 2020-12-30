@@ -21,7 +21,7 @@ from time import sleep
 from gpiozero import LED, Button
 
 blink_on = False
-interval = 1
+interval = 0.5
 
 button = Button(21)
 led1 = LED(26)
@@ -34,9 +34,9 @@ def go_blink():
         led1.off()
         led2.off()
     else:
-        led1.blink(interval, off_time)
+        led1.blink(interval, interval)
         sleep(interval)
-        led2.blink(interval, off_time)
+        led2.blink(interval, interval)
 
     blink_on = not blink_on
 
