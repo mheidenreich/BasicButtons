@@ -48,4 +48,5 @@ except KeyboardInterrupt:
     pass
 
 finally:
-    pass
+    led1.close()
+    led2.close()
